@@ -1385,11 +1385,7 @@ public abstract class StackIterableTestCase
         {
             this.predicate = predicate;
         }
-
-        private static <T1, T2> CountingPredicate2<T1, T2> of(Predicate2<T1, T2> predicate)
-        {
-            return new CountingPredicate2<>(predicate);
-        }
+        
 
         @Override
         public boolean accept(T1 each, T2 parameter)
