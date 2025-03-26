@@ -1385,7 +1385,7 @@ public abstract class StackIterableTestCase
         {
             this.predicate = predicate;
         }
-        
+
 
         @Override
         public boolean accept(T1 each, T2 parameter)

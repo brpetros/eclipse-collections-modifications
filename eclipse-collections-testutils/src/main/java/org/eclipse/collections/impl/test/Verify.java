@@ -551,19 +551,7 @@ public final class Verify extends Assert
             int expectedSize,
             Iterable<?> actualIterable)
     {
-        Verify.assertObjectNotNull(iterableName, actualIterable);
-
-        int actualSize = Iterate.sizeOf(actualIterable);
-        if (actualSize != expectedSize)
-        {
-            fail("Incorrect size for "
-                    + iterableName
-                    + "; expected:<"
-                    + expectedSize
-                    + "> but was:<"
-                    + actualSize
-                    + '>');
-        }
+        Verify.assertIterableSize(iterableName,expectedSize,actualIterable);
     }
 
     /**
@@ -628,6 +616,7 @@ public final class Verify extends Assert
         }
     }
 
+    
     /**
      * Assert the size of the given {@link Map}.
      */
