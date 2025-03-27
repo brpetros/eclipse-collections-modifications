@@ -585,23 +585,23 @@ public final class StringPredicates
     private static final class Size extends Predicates<String>
     {
         private static final long serialVersionUID = 1L;
-        private final int size;
+        private final int acceptedSize;
 
         private Size(int newSize)
         {
-            this.size = newSize;
+            this.acceptedSize = newSize;
         }
 
         @Override
         public boolean accept(String anObject)
         {
-            return anObject != null && anObject.length() == this.size;
+            return anObject != null && anObject.length() == this.acceptedSize;
         }
 
         @Override
         public String toString()
         {
-            return "StringPredicates.size(" + this.size + ')';
+            return "StringPredicates.size(" + this.acceptedSize + ')';
         }
     }
 
